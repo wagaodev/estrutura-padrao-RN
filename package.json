@@ -1,0 +1,100 @@
+{
+  "name": "uber",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios --simulator='iPhone 13 Pro Max' ",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "rebuild": "yarn clean && yarn build",
+    "clean": "yarn clean:android && yarn clean:ios && rm -rf node_modules && rm -f yarn.lock",
+    "clean:android": "rm -rf android/app/build && rm -rf android/build && rm -rf android/.gradle && rm -rf android/build.gradle-e",
+    "clean:ios": "rm -rf ios/build && rm -rf ios/Pods && rm -rf ios/Podfile.lock",
+    "build": "yarn && yarn build:android && yarn build:ios",
+    "build:android": "npx jetifier",
+    "build:ios": "cd ios/ && pod install"
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.15.9",
+    "@react-navigation/bottom-tabs": "^6.0.8",
+    "@react-navigation/native": "^6.0.5",
+    "@react-navigation/native-stack": "^6.2.3",
+    "@reduxjs/toolkit": "^1.6.2",
+    "react": "17.0.2",
+    "react-native": "0.66.2",
+    "react-native-safe-area-context": "^3.3.2",
+    "react-native-screens": "^3.8.0",
+    "react-native-svg": "^12.1.1",
+    "react-native-svg-transformer": "^0.14.3",
+    "react-native-vector-icons": "^9.0.0",
+    "react-redux": "^7.2.5",
+    "redux": "^4.1.1",
+    "shortid": "^2.2.16",
+    "styled-components": "^5.3.3",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "@types/jest": "^26.0.23",
+    "@types/metro-config": "^0.66.0",
+    "@types/react-native": "^0.65.0",
+    "@types/react-native-vector-icons": "^6.4.9",
+    "@types/react-redux": "^7.1.20",
+    "@types/react-test-renderer": "^17.0.1",
+    "@types/shortid": "^0.0.29",
+    "@types/styled-components": "^5.1.15",
+    "@types/styled-components-react-native": "^5.1.2",
+    "@typescript-eslint/eslint-plugin": "^4.28.4",
+    "@typescript-eslint/parser": "^4.28.4",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.6.3",
+    "babel-plugin-root-import": "^6.6.0",
+    "eslint": "^7.15.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^7.0.0",
+    "eslint-import-resolver-babel-plugin-root-import": "^1.1.1",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-import-helpers": "^1.1.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.2.0",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.4",
+    "jest": "^26.6.3",
+    "lint-staged": "^11.2.6",
+    "metro-react-native-babel-preset": "^0.66.2",
+    "prettier": "^2.3.2",
+    "react-test-renderer": "17.0.2",
+    "typescript": "^4.4.4"
+  },
+  "resolutions": {
+    "@types/react": "^17"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  }
+}
