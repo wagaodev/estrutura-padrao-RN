@@ -1,4 +1,5 @@
 import React from 'react';
+import Icon from 'react-native-vector-icons/Feather';
 
 // import {  } from '~/components';
 // import {  } from '~/assets';
@@ -11,6 +12,7 @@ const Home = () => {
     <S.Container>
       <S.Title>Hello Motherfuckers</S.Title>
       <S.Description>Wagnifico na parada</S.Description>
+      <Icon name="home" size={20} color="#fff" />
     </S.Container>
   );
 };
