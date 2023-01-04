@@ -1,4 +1,4 @@
-package com.uber;
+package com.wcfx.neon;
 
 import com.facebook.react.ReactActivity;
 
