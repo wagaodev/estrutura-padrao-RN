@@ -1,5 +1,5 @@
 {
-  "name": "uber",
+  "name": "neon",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -25,6 +25,7 @@
     "@reduxjs/toolkit": "^1.6.2",
     "react": "17.0.2",
     "react-native": "0.66.2",
+    "react-native-rename": "^3.2.1",
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "^3.8.0",
     "react-native-svg": "^12.1.1",
