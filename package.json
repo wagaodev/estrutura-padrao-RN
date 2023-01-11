@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
-    "ios": "react-native run-ios --simulator='iPhone 13 Pro Max' ",
+    "ios": "react-native run-ios --simulator='iPhone 12' ",
+    "run:ios:dev": "react-native run-ios --simulator='iPhone 14 Pro Max' ",
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
@@ -13,8 +14,7 @@
     "clean:cache": "yarn cache clean --all",
     "clean:android": "rm -rf android/app/build && rm -rf android/build && rm -rf android/.gradle && rm -rf android/build.gradle-e",
     "clean:ios": "rm -rf ios/build && rm -rf ios/Pods && rm -rf ios/Podfile.lock",
-    "build": "yarn && yarn build:android && yarn build:ios",
-    "build:android": "npx jetifier",
+    "build": "yarn && yarn build:ios",
     "build:ios": "cd ios/ && pod install"
   },
   "dependencies": {
