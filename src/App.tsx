@@ -4,7 +4,7 @@ import { StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { ThemeProvider } from 'styled-components';
 
-import theme from './global';
+import { theme } from './global';
 import Routes from './routes';
 
 const App = () => {
