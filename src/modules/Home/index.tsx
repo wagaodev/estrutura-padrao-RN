@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/Feather';
 
 import * as S from './styles';
 
-const Home = () => {
+export const Home = () => {
   return (
     <S.Container>
       <S.Title>Hello Motherfuckers</S.Title>
@@ -13,4 +13,3 @@ const Home = () => {
     </S.Container>
   );
 };
-export { Home };
