@@ -7,5 +7,5 @@ export const Icon = styled(IconAtomic).attrs({
   name: 'arrow-back',
   size: 28,
 })`
-  color: ${theme.colors.brand.header};
+  color: ${theme.colors.new.header};
 `;

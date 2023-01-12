@@ -1,27 +1,38 @@
 import React from 'react';
 
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {
+  createNativeStackNavigator,
+  NativeStackNavigationOptions,
+} from '@react-navigation/native-stack';
 
 import { Icon } from './styles';
 
 import { theme } from '../global';
 import { Home, Onboarding } from '../modules';
+import { RootStackParamList } from './types';
 
-const { Navigator, Screen } = createNativeStackNavigator();
+const { Navigator, Screen } = createNativeStackNavigator<RootStackParamList>();
+
+const HeaderIcon = () => <Icon />;
+
+const options: NativeStackNavigationOptions = {
+  headerLeft: HeaderIcon,
+  headerShown: true,
+  headerStyle: {
+    backgroundColor: theme.colors.new.header,
+  },
+  headerTintColor: theme.colors.new.header,
+  headerTitleStyle: {
+    fontSize: 20,
+    fontFamily: 'Inter',
+    fontWeight: '700',
+  },
+  contentStyle: { backgroundColor: theme.colors.base.gray200 },
+  headerBackTitleVisible: false,
+  headerTitleAlign: 'center',
+};
 
 const routes = () => {
-  const HeaderIcon = <Icon />;
-  const options = {
-    headerLeft: () => HeaderIcon,
-    headerTintColor: theme.colors.brand.header,
-    headerTitleStyle: {
-      color: theme.colors.brand.header,
-    },
-    headerBackTitleStyle: {
-      color: 'red',
-    },
-  };
-
   return (
     <Navigator initialRouteName="Onboarding" screenOptions={options}>
       <Screen
