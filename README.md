@@ -1,13 +1,25 @@
-## <h1><center>Configuração do PROJETO.<br>
+## Repositório da estrutura padrão RN
 
-<br>
-<center>
-<h3>[x] - Estrutura de pastas criadas.</br>
-<h3>[x] - eslint, prettier e eslint ignore criada.</br>
-<h3>[x] - commitlint criado e configurado.</br>
-<h3>[x] - editorconfig criado e configurado.</br>
-<h3>[x] - babelconfig e metroconfig configurado.</br>
-<h3>[x] - husky e lint-staged configurados.</br>
-<h3>[ ] - vector-icons.</br>
-<h3>[ ] - fontes customizadas.</br>
-</center>
+### ❗️ Algumas possibilidades com o Repo 🎮
+
+- Troca do nome do projeto com React Native Rename 
+- Troca do Bundle ID junto ao React Native Rename
+- Fontes Personalizadas
+- Images configuradas em ambos devices.
+
+#### 🛠 Configuração 🛠
+
+- **TROCA DO NOME DO PROJETO**
+
+  - npx react-native-rename "new_name"
+
+- **TROCA DO NOME DO PROJETO E BUNDLE ID **: 
+  - npx react-native-rename "new_name" -b "bundle_identifier"
+
+#### ⚙️ Git ⚙️
+
+Branchs do Projeto:
+
+- **develop** (Branch pra onde deve ser destinado os Pull Requests)
+- **staging** (Branch onde teremos as versões que estão nas mãos dos Tester's)
+- **main** (Branch de lançamento de versão)
