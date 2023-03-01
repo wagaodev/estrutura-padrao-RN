@@ -13,7 +13,7 @@
 
   - npx react-native-rename "new_name"
 
-- **TROCA DO NOME DO PROJETO E BUNDLE ID **: 
+- **TROCA DO NOME DO PROJETO E BUNDLE ID :** 
   - npx react-native-rename "new_name" -b "bundle_identifier"
 
 #### ⚙️ Git ⚙️
